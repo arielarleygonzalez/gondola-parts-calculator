@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gondola Parts Calculator</title>
+    <link rel="stylesheet" href="/style.css">
+    
+  
+
+    
+</head>
+<body>
+    
+    
+   
+ 
+    
+    
+    
+    
+    
+    <div class="container">
+        <h1>Gondola Parts Calculator</h1>
+        
+        <!-- Formulario de entrada -->
+        <form id="gondolaForm">
+            <label for="totalLength">Total length of the gondola in feet (multiple of 4):</label>
+            <input type="number" id="totalLength" name="totalLength" required min="4" step="4" placeholder="Enter length in feet">
+
+            <label for="uprightSize">Select Upright Size:</label>
+            <select id="uprightSize" name="uprightSize" required>
+                <option value="84">84"</option>
+                <option value="78">78"</option>
+                <option value="72">72"</option>
+                <option value="66">66"</option>
+            </select>
+
+            <label for="shoeBaseSize">Select Shoe/Base Size:</label>
+            <select id="shoeBaseSize" name="shoeBaseSize" required>
+                <option value="12">12"</option>
+                <option value="18">18"</option>
+                <option value="24">24"</option>
+                <option value="32">32"</option>
+                <option value="34">34"</option>
+            </select>
+
+            <button type="submit" class="btn primary">Calculate Parts</button>
+        </form>
+
+        <!-- Resultados y representación de la góndola -->
+        <div id="partsResult" class="result-box" style="display: none;"></div>
+        <!-- Botones para la vista 2D y 3D -->
+      
+       
+
+       <!-- Botón para generar la vista en 2D (oculto inicialmente) -->
+        <button id="generate2DGraphBtn" class="btn secondary" style="display: none;">Generate 2D Gondola Layout</button>
+
+        <!-- Contenedor para la visualización 2D -->
+        <canvas id="gondola2DCanvas" width="800" height="400" style="display: none; border:1px solid #000;"></canvas>
+
+    
+
+        
+         <!-- Botón para generar la vista en 3D -->
+        <button id="generate3DGraphBtn" class="btn secondary" style="display: none;">Generate 3D Gondola Layout</button>
+        
+        <!-- Contenedor para la visualización 3D -->
+        <div id="gondola3DContainer" style="width: 100%; height: 600px;"></div>
+        
+        <!-- Botón de regresar -->
+        <button id="backBtn" class="btn back" style="display: none;">Go Back</button>
+    </div>
+
+    <!-- Scripts para Three.js y OrbitControls -->
+    <!-- Scripts necesarios para Three.js y OrbitControls -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    
+    <script src="script.js"></script>
+    <script src="3d-gondola.js"></script>
+    <script src="2d-gondola.js"></script> <!-- Este debe estar después de main-script.js -->
+</body>
+</html>
