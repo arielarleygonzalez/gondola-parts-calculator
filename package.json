@@ -1,17 +1,16 @@
+
 {
-  "name": "gondola-project-v2",
+  "name": "gondola-parts-calculator",
   "version": "1.0.0",
-  "description": "Web app to calculate gondola parts based on length",
+  "description": "A gondola parts calculator application",
   "main": "app.js",
   "scripts": {
-       "start": "node app.js"
-    
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.18.2"
   }
 }
